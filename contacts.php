@@ -1,3 +1,9 @@
+<?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -48,106 +54,51 @@
   </div>
 </nav>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="contactinformation col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<p>Phonenumber:36042091169</p>
-				<p>Company email:myemail@email.yes</p>
-				
-				<p>Social networks</p> 
-				<a href="https://facebook.com"><img src="./img/facebooklogo.png" alt="Failed to load"></a>
-				<a href="https://twitter.com"><img src="./img/twitterlogo.png" alt="Failed to load"></a>
-				<a href="https://instagram.com"><img src="./img/instagramlogo.jpg" alt="Failed to load"></a> 
-
-			</div>
-		</div>
-		<div class="row">
-
-			<div class="map col-lg-4 col-md-4 col-sm-6 col-xs-12">	
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17409.839759239712!2d24.124979852646245!3d56.94486113499529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecf7bac058ce9%3A0x96a8a0e931b27448!2sRiga%20State%20Technical%20School!5e0!3m2!1sen!2slv!4v1574625988179!5m2!1sen!2slv" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-			</div>
-		</div>
-	
-	
-		<div class="row">
-			<table class="table">
-				<thead>
-				    <tr>
-				      <th scope="col">#</th>
-				      <th scope="col">First Name</th>
-				      <th scope="col">Last Name</th>
-				      <th scope="col">Email</th>
-				    </tr>
-				</thead>
-			  	
-			  	<tbody>
-				    <tr>
-				      <th scope="row">1</th>
-				      <td>Mark</td>
-				      <td>Pine</td>
-				      <td>markpine@fakemail.com</td>
-				    </tr>
-				    <tr>
-				      <th scope="row">2</th>
-				      <td>Jacob</td>
-				      <td>Thornton</td>
-				      <td>jacobthornton@fakemail.com</td>
-				    </tr>
-				    <tr>
-				      <th scope="row">3</th>
-				      <td>Michael</td>
-				      <td>Norton</td>
-				      <td>michaelnorton@fakemail.com</td>
-				    </tr>
-			  	</tbody>
-			</table>
-		</div>
-		<form>
-			<h1>Contact us</h1><br>
-			<div class="form-group">
-				<label for="Name">Name</label>
-	    		<input type="text" class="form-control" id="Name" placeholder="Enter name">
-			</div>
-			<div class="form-group">
-				<label for="Email">Email address</label>
-	    		<input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
-			</div>
-
-			<div class="form-group">
-			    <label for="Urgency">Urgency</label>
-			    <select class="form-control" id="exampleFormControlSelect1">
-				    <option>Not urgent</option>
-				    <option>Normal urgency</option>
-				    <option>Very urgent</option>
-			    </select>
-		  	</div>
-
-		  	<div class="custom-control custom-radio">
-    			<input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
- 				<label class="custom-control-label" for="customRadio1">Toggle this one</label>
-			</div>
-				
-
-			<div class="custom-control custom-radio">
-				<input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-				<label class="custom-control-label" for="customRadio2">Or this one</label>
-			</div>
+	<div class="container">
 			
-			<div class="form-group">
-    			<label for="exampleFormControlTextarea1">Example textarea</label>
-    			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" value="" id="Checkbox">
-				<label class="form-check-label" for="Checkbox">
-				Checkbox
-				</label>
-			</div> 
-			<div class="button">
-				<br>
-				<button type="submit" class="btn btn-primary mb-2">Submit</button>
+
+
+			
+			<div class="row">
+				<div class = "col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>	
+				<div class="contact col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<h2>Contact us</h2>
+				<form action="contacts.php" method = "post">	
+					<div class="form-group">
+						<label for = "contact-name">Name:</label> 
+						<input type="text" class = "form-control" id="name" name = "contact-name">
+					</div>
+					<div class="form-group">
+						<label for = "contact-surname">Surname:</label> 
+						<input type="text" class = "form-control" id="surname" name = "contact-surname">
+					</div>
+					<div class="form-group">
+						<label for = "contact-email">Email:</label> 
+						<input type="email" class = "form-control" id="email" name = "contact-email">
+					</div>
+					<div class="form-group">
+						<label for = "text">Text:</label> 
+						<textarea class ="form-control" name="text" id="text"></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary" name = 'submit'>Send</button>
+				</form>
 			</div>
-		</form>
-	</div> 
+			<div class = "col-lg-2 col-md-2 col-sm-12 col-xs-12"></div> 
+		
+		</div>	
+			
+			
+			
+		</div>
+
+	<?php  
+		if(isset($_POST['submit'])) {
+			echo "Button pressed";
+			echo("Your name:<b>{$_POST['contact-name']}</b><br>");
+			echo("Your surname:<b>{$_POST['contact-surname']}</b><br>");
+			echo("Your email:<b>{$_POST['contact-email']}</b><br>");
+			echo("Your text:<b>{$_POST['text']}</b><br>");
+		}
+	?>
 </body> 
 </html>
