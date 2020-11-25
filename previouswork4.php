@@ -10,11 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>My website</title>
 	<link rel="stylesheet" href="./css/reset.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" lang="en">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/stylesheet.css"> 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<link rel="stylesheet" href="./lib/lightbox/css/lightbox.css"> 
-	<script src = "./lib/lightbox/js/lightbox.js"></script>
+
 
 </head>
 <body>
@@ -28,39 +26,33 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Home </a>
+        <a class="nav-link" href="index.php">Home </a>
       </li>
       <li class="nav-item active dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Previous work
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="previouswork1.html">1</a>
-          <a class="dropdown-item" href="previouswork2.html">2</a>
-          <a class="dropdown-item" href="previouswork3.html">3</a>
+          <a class="dropdown-item" href="previouswork1.php">1</a>
+          <a class="dropdown-item" href="previouswork2.php">2</a>
+          <a class="dropdown-item" href="previouswork3.php">3</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="previouswork4.html">Video</a>
+          <a class="dropdown-item" href="previouswork4.php">Video</a>
         </div>
       	</li>
    		<li class="nav-item">
-        	<a class="nav-link" href="contacts.html">Contacts</a>
+        	<a class="nav-link" href="contacts.php">Contacts</a>
       	</li>
 	<li class="nav-item">
-        	<a class="nav-link" href="spa.html">SPA</a>
+        	<a class="nav-link" href="spa.php ?>">SPA</a>
       	</li>
     </ul>
   </div>
 </nav>
-	<div class = "container">
+	<div class="container">
 		<div class="row">
-			<a class = "col-lg-4 col-md-4 col-sm-6 col-xs-12"href="./img/office3.jpg" data-lightbox = "gallery2"><img class = "img-fluid"src="./img/office3.jpg" alt="Failed to load"></a>
-			<a class = "col-lg-4 col-md-4 col-sm-6 col-xs-12"href="./img/office4.jpg" data-lightbox = "gallery2"><img class = "img-fluid"src="./img/office4.jpg" alt="Failed to load"></a>
-			<a class = "col-lg-4 col-md-4 col-sm-6 col-xs-12"href="./img/office5.jpg" data-lightbox = "gallery2"><img class = "img-fluid"src="./img/office5.jpg" alt="Failed to load"></a>
-		</div>
-		
-		<div class="row">
-			<div class="projectinfo col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<p>God is dead. God remains dead. And we have killed him. Yet his shadow still looms. How shall we comfort ourselves, the murderers of all murderers? What was holiest and mightiest of all that the world has yet owned has bled to death under our knives; who will wipe this blood off us? What water is there for us to clean ourselves?</p>
+			<div class="video embed-responsive embed-responsive-4by3 col-md-12 col-sm-12 col-xs-12 col-lg-12">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/b4owT1OoBlE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>

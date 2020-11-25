@@ -21,25 +21,25 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Previous work
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="previouswork1.html">1</a>
-          <a class="dropdown-item" href="previouswork2.html">2</a>
-          <a class="dropdown-item" href="previouswork3.html">3</a>
+          <a class="dropdown-item" href="previouswork1.php">1</a>
+          <a class="dropdown-item" href="previouswork2.php">2</a>
+          <a class="dropdown-item" href="previouswork3.php">3</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="previouswork4.html">Video</a>
+          <a class="dropdown-item" href="previouswork4.php">Video</a>
         </div>
       	</li>
    		<li class="nav-item">
-        	<a class="nav-link" href="contacts.html">Contacts</a>
+        	<a class="nav-link" href="contacts.php">Contacts</a>
       	</li>
       	<li class="nav-item">
-        	<a class="nav-link" href="spa.html">SPA</a>
+        	<a class="nav-link" href="spa.php">SPA</a>
       	</li>
     </ul>
 

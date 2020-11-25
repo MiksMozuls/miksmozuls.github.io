@@ -9,18 +9,18 @@
 <body>
 	
 	<div class="buttons">
-		<a href="index.html">Home</a> 
-		<a class= "current" href="previouswork.html">Previous work</a>
-		<a href="contacts.html">Contacts</a>
+		<a href="index.php">Home</a> 
+		<a class= "current" href="previouswork.php">Previous work</a>
+		<a href="contacts.php">Contacts</a>
 	
 	</div> 
 
 	<div class="links">
 		<ul>
-			<li><a href="previouswork1.html">Project1</a></li>
-			<li><a href="previouswork2.html">Project2</a></li>
-			<li><a href="previouswork3.html">Project3</a></li>
-			<li><a href="previouswork4.html">Video</a></li>
+			<li><a href="previouswork1.php">Project1</a></li>
+			<li><a href="previouswork2.php">Project2</a></li>
+			<li><a href="previouswork3.php">Project3</a></li>
+			<li><a href="previouswork4.php">Video</a></li>
 
 		</ul>
 	</div>
