@@ -3,32 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
-<?php  
-		$nameErr = $textErr = $surnameErr = $emailErr = ""; 
-		$name = $text = $surname= $email = ""; 
-		if(isset($_POST['submit'])) {
-			if(empty($_POST["contact-name"])){
-				$nameErr = "Name is required"; 
-				
-			}
-			else {
-				$name = $_POST["contact-name"]; 
-			}
-			if(!ctype_alpha($_POST["contact-surname"])){
-				$surnameErr = "Invalid charecters. Surname can only contain letters";
-			}
-			else{
-				$surname = $_POST["contact-surname"]; 
-			}
-			
-			if(!ctype_alnum(str_replace(array(' '),'',$_POST["text"]))){
-				$textErr = "Text can't contain special charecters";
-			}
-			else{
-				$text = $_POST["text"]; 
-			}
-		}
-?>	
+
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -72,7 +47,7 @@ error_reporting(E_ALL);
         	<a class="nav-link" href="contacts.php">Contacts</a>
       	</li>
 	
-	<li class="nav-item">
+		<li class="nav-item">
         	<a class="nav-link" href="spa.php">SPA</a>
       	</li>
     </ul>
@@ -81,51 +56,55 @@ error_reporting(E_ALL);
 
 	<div class="container">
 		
+		<div class="row">
 
-
-			
-			<div class="row">
-				<div class = "col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>	
-				<div class="contact col-lg-8 col-md-8 col-sm-12 col-xs-12">
-				<h2>Contact us</h2>
-				<form action="contacts.php" method = "post">	
-					<span class = "error"><?php echo $nameErr;?></span>
+			<div class="contact col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<h2>Login</h2>
+				<form action="loginorregister.php" method = "post">	
+					
 					<div class="form-group">
-						<label for = "contact-name">Name:</label> 
-						<input type="text" class = "form-control" id="name" name = "contact-name">
+						<label for = "contact-name">Username:</label> 
+						<input type="text" class = "form-control" id="username" name = "username">
 					</div>
-					<span class = "error"><?php echo $surnameErr;?></span>
+					
 					<div class="form-group">
-						<label for = "contact-surname">Surname:</label> 
-						<input type="text" class = "form-control" id="surname" name = "contact-surname">
-					</div>
-					<div class="form-group">
-						<label for = "contact-email">Email:</label> 
-						<input type="email" class = "form-control" id="email" name = "contact-email">
-					</div>
-					<div class="form-group">
-						<span class = "error"><?php echo $textErr;?></span>
-						<label for = "text">Text:</label> 
-						<textarea class ="form-control" name="text" id="text"></textarea>
+						<label for = "contact-surname">Password:</label> 
+						<input type="password" class = "form-control" id="password" name = "password">
 					</div>
 					<button type="submit" class="btn btn-primary" name = 'submit'>Send</button>
 				</form>
 			</div>
-			<div class = "col-lg-2 col-md-2 col-sm-12 col-xs-12"></div> 
-		
-		</div>	
-			
-			
-			
-		</div>
 
-	<?php  
-		if(isset($_POST['submit'])) {
-			echo("Your name:<b>{$name}</b><br>");
-			echo("Your surname:<b>{$surname}</b><br>");
-			echo("Your email:<b>{$_POST['contact-email']}</b><br>");
-			echo("Your text:<b>{$text}</b><br>");
-		}
-	?>
+			<div class="contact col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<h2>Register</h2>
+				<form action="loginorregister.php" method = "post"> 
+					
+					<div class="form-group">
+						<label for = "contact-name">Username:</label> 
+						<input type="text" class = "form-control" id="username" name = "username">
+					</div>
+					
+					<div class="form-group">
+						<label for = "contact-name">E-mail:</label> 
+						<input type="text" class = "form-control" id="username" name = "username">
+					</div>
+
+					<div class="form-group">
+						<label for = "contact-surname">Password:</label> 
+						<input type="password" class = "form-control" id="password" name = "password">
+					</div>
+
+					<div class="form-group">
+						<label for = "contact-surname">Confirm Password:</label> 
+						<input type="password" class = "form-control" id="password" name = "password">
+					</div>
+					<button type="submit" class="btn btn-primary" name = 'submit'>Send</button>
+				</form>
+			</div>
+
+		</div>	
+						
+	</div>
+
 </body> 
 </html>
