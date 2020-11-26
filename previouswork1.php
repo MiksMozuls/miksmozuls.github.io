@@ -47,9 +47,10 @@
         	<a class="nav-link" href="contacts.php">Contacts</a>
       	</li>
 	
-	<li class="nav-item">
-        	<a class="nav-link" href="spa.php">SPA</a>
-      	</li>
+		<li class="nav-item">
+        	<a class="nav-link" href="loginorregister.php">Login/register</a>
+      	</li> 
+      	
     </ul>
   </div>
 </nav>
